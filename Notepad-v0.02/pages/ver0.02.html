@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Notepad</title>
+  <link rel="stylesheet" href="../styles/loli/loli.css">
+  <link rel="stylesheet" href="../styles/docs.css">
+</head>
+
+<body>
+  <div class="m-wrap">
+    <div id="app">
+      <header>
+        <h1>Notepad</h1>
+      </header>
+      <div id="main">
+        <div class="note-wrap">
+          <input type="text" id="new-note-title" placeholder="输入标题">
+          <ul id="note-list">
+
+          </ul>
+        </div>
+      </div>
+      <footer>
+        <p><a href="https://github.com/JingDeZhe/notepad">Github</a>
+          <br>Jingzhe 2019</p>
+      </footer>
+    </div>
+  </div>
+
+  <!-- 模板 -->
+  <div id="template" hidden>
+    <li class="note-article">
+      <div style="display:flex">
+        <button class="delete"></button>
+        <button class="add-content"></button>
+        <div class="title-wrap">
+          <h4 class="note-title"></h4>
+          <input type="text" class="edit-note-title" hidden>
+        </div>
+      </div>
+      <textarea class="edit-content" hidden></textarea>
+      <p class="note-content"></p>
+    </li>
+  </div>
+
+  <script src="../vendors/jquery-1.12.4.js"></script>
+  <script src="../scripts/appStorage.js"></script>
+  <script src="../scripts/notepad.js"></script>
+  <script>
+    $(function(){
+      $("#new-note-title").focusout(function(){
+        $("#new-note-title")[0].style.width = "5rem";
+        $("#new-note-title")[0].style.color = "#f08f72";
+        $("#new-note-title").val("笔记本");
+      })
+      $("#new-note-title").focus(function(){
+        $("#new-note-title")[0].style.width = "60%";
+        $("#new-note-title")[0].style.color = "#fefefe";
+        $("#new-note-title").val("");
+      })
+    });
+  </script>
+</body>
+
+</html>

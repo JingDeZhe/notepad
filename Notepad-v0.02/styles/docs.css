@@ -1,0 +1,135 @@
+input {
+  outline: none;
+  background-color: #1b2e3c;
+  color: #fefefe;
+  border: #383e4b;
+  padding: 0.4rem 1rem;
+  border-radius: 0.2rem; }
+
+.m-wrap {
+  margin-left: calc(100vw - 100%); }
+
+#app {
+  min-height: 100vh;
+  max-width: 960px;
+  margin-left: auto;
+  margin-right: auto;
+  display: flex;
+  flex-direction: column; }
+  #app header {
+    background-color: #163045;
+    color: #fefefe;
+    padding: 0.4rem 0.3rem 0.3rem;
+    padding-left: 1rem; }
+  #app #main {
+    background-color: #dcdbd5;
+    color: #1b2e3c;
+    flex: auto; }
+    #app #main .note-wrap {
+      margin-top: 1rem;
+      width: 70%;
+      margin-right: auto;
+      margin-left: auto; }
+      #app #main .note-wrap input#new-note-title {
+        width: 60%;
+        transition: width 0.2s ease-in-out; }
+        #app #main .note-wrap input#new-note-title::-webkit-input-placeholder {
+          color: #7faaa8; }
+        #app #main .note-wrap input#new-note-title:-moz-placeholder {
+          color: #7faaa8; }
+        #app #main .note-wrap input#new-note-title::-moz-placeholder {
+          color: #7faaa8; }
+        #app #main .note-wrap input#new-note-title:-ms-input-placeholder {
+          color: #7faaa8; }
+  #app #note-list {
+    list-style: none;
+    padding-left: 0; }
+  #app button.delete,
+  #app button.add-content {
+    outline: none;
+    border: none;
+    background-color: #e24a6e;
+    width: 1rem;
+    border-bottom-left-radius: 0.2rem;
+    border-top-left-radius: 0.2rem; }
+  #app button.add-content {
+    border-radius: 0;
+    background-color: #00a396; }
+  #app textarea.edit-content {
+    resize: none;
+    margin-top: 0.5rem;
+    padding: 0.4rem 0.8rem;
+    width: 100%;
+    min-height: 5em;
+    border-radius: 0.2rem;
+    background-color: #4c4b60;
+    color: #c7c1c5;
+    font-size: 1rem;
+    outline: none;
+    border: none; }
+  #app p.note-content {
+    border-radius: 0.2rem;
+    background-color: #4c4b60;
+    color: #c7c1c5;
+    padding: 0.4rem 0.8rem; }
+    #app p.note-content:empty {
+      padding: 0; }
+  #app .note-article .title-wrap {
+    background-color: #2d282f;
+    color: #7dbda5;
+    margin: 0;
+    line-height: 2rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    min-height: 2rem;
+    width: max-content;
+    position: relative; }
+    #app .note-article .title-wrap::before {
+      content: "";
+      background-color: #dcdbd5;
+      position: absolute;
+      z-index: 2;
+      width: 0.6rem;
+      height: 0.6rem;
+      border-radius: 50%;
+      right: 0;
+      top: 50%;
+      transform: translate(0, -50%); }
+    #app .note-article .title-wrap::after {
+      content: "";
+      position: absolute;
+      left: 100%;
+      top: 0;
+      border: 1rem solid transparent;
+      border-left-color: #2d282f; }
+    #app .note-article .title-wrap h4 {
+      line-height: 2rem;
+      font-size: 1.2rem;
+      margin: 0;
+      white-space: nowrap;
+      overflow-x: auto; }
+    #app .note-article .title-wrap input {
+      padding: 0;
+      font-size: 1.2rem;
+      background-color: #2d282f;
+      color: inherit; }
+  #app footer {
+    background-color: #1b2e3c;
+    color: #fefefe;
+    padding-top: 0.4rem;
+    padding-left: 1rem; }
+    #app footer a:link {
+      color: #fe6856; }
+
+@media (max-width: 480px) {
+  .note-wrap {
+    width: 90% !important; }
+
+  input#new-note-title {
+    width: 100% !important; }
+
+  .note-article .title-wrap h4,
+  .note-article .title-wrap input {
+    max-width: 12rem !important; } }
+
+/*# sourceMappingURL=docs.css.map */
